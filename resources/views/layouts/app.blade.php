@@ -12,7 +12,7 @@
 <body>
 
     <div class="font-[Inter] bg-gray-200">
-        <header class="bg-gray-600 shadow">
+        <header class="bg-green-800 shadow">
             <img src="/public/uploads/logo fond transparent.png" alt="logo" class="h-8 w-8">
             <div class="flex items-center w-full">
                 <div class="max-w-6xl mx-auto px-3 py-8">
