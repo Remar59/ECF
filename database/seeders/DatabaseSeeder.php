@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             'image' => 'https://m.media-amazon.com/images/I/61XsoHN5liL.jpg',
             'brand' => 'EPEDA',
             'slug' => Str::of('EPEDACONFORT+')->slug(),
-            'description' => 'Matelas Confort+ 90 X 190',
+            'description' => 'Matelas Confort 90 X 190',
             'price' => '759',
             'stock' => '25',
 

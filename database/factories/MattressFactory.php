@@ -20,7 +20,7 @@ class MattressFactory extends Factory
             'image' => fake()->imageUrl(),
             'brand' => fake()->sentence(),
             'slug' => fake()->slug(),
-            'description' => fake()->text(),
+            'description' => fake()->sentences(),
             'price' => fake()->randomDigit(),
             'stock' => fake()->boolean(),
 

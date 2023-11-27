@@ -23,5 +23,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('mattress_size');
+        $table->foreignId('mattress_id')->constrained()->cascadeOnDelete();
+        $table->foreignId('size_id')->constrained()->cascadeOnDelete();
     }
 };
