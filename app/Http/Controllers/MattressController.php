@@ -39,6 +39,7 @@ class MattressController extends Controller
             'brand' => 'required',
             'description' => 'required|between:10,200',
             'price' => 'required|integer|between:1,15000',
+            'discount' => '',
             'stock' => 'required|integer|between:1,10000',
             'sizes' => 'required|array',
             'sizes.*' => 'required|exists:sizes,id',
@@ -50,6 +51,7 @@ class MattressController extends Controller
         $mattress->slug = Str::slug($mattress->brand); //récupère le brand du matelas créer afin d'en faire le slug
         $mattress->description = $request->description;
         $mattress->price = $request->price;
+        $mattress->discount = $request->discount;
         $mattress->stock = $request->stock;
         $mattress->save();
         $mattress->sizes()->sync($request->sizes);
@@ -79,6 +81,7 @@ class MattressController extends Controller
             'brand' => 'required',
             'description' => 'required|between:10,200',
             'price' => 'required|integer|between:1,15000',
+            'discount' => '',
             'stock' => 'required|integer|between:1,10000',
             'sizes' => 'required|array',
             'sizes.*' => 'required|exists:sizes,id',
@@ -89,6 +92,7 @@ class MattressController extends Controller
         $mattress->slug = Str::slug($mattress->brand); 
         $mattress->description = $request->description;
         $mattress->price = $request->price;
+        $mattress->discount = $request->discount;
         $mattress->stock = $request->stock;
         $mattress->save();
         $mattress->sizes()->sync($request->sizes);

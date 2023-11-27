@@ -9,7 +9,7 @@
             matelas</a>
     </div>
 
-    <div class="flex flex-col mx-3">
+    <div class="flex mx-3">
         @foreach ($mattresses as $mattress)
             <div class=" w-1/2 md:w-1/3 lg:w-1/5 mb-4">
                 <div class="flex flex-col justify-between h-full">
@@ -34,6 +34,9 @@
                             </a>
 
                             <h3 class="text-sm text-gray-600 underline group-hover:no-underline"> {{ $mattress->brand }}
+                                <p>{{ $mattress->price }}€</p>
+                                <p>{{ $mattress->sizes->pluck('name')->implode(', ') }}</p>
+
                             </h3>
                         </div>
                     </a>

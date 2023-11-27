@@ -2,16 +2,17 @@
 
 @section('content')
 
+<a href="/matelas" class="text-gray-500 flex gap-2 mb-3">
+    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+    </svg>
+    Retour aux matelas
+</a>
+
+
 @foreach ($errors->all() as $error)
         <p class="text-red-500">{{ $error }}</p>
     @endforeach
-
-    <a href="/matelas" class="text-gray-500 flex gap-2 mb-3">
-                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                </svg>
-                Retour aux matelas
-            </a>
 
     <form method="post">
         {{-- Idem CSRF pour sécurité--}}
@@ -35,6 +36,11 @@
         <div class="mb-3">
             <label for="price" class="block mb-1">Prix</label>
             <input type="text" name="price" id="price" value="{{ old('price', $mattress->price) }}" class="rounded-lg">
+        </div>
+
+        <div class="mb-3">
+            <label for="discount" class="block mb-1">discount</label>
+            <input type="text" name="discount" id="discount" value="{{ old('discount', $mattress->discount) }}" class="rounded-lg">
         </div>
 
         <div class="mb-3">

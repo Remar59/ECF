@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             'slug' => Str::of('EPEDACONFORT+')->slug(),
             'description' => 'Matelas Confort 90 X 190',
             'price' => '759',
+            'discount'=> '43',
             'stock' => '25',
 
         ]);
@@ -39,6 +40,7 @@ class DatabaseSeeder extends Seeder
             'slug' => Str::of('DREAMWAYMA')->slug(),
             'description' => 'Matelas Assurance 90 X 190',
             'price' => '809',
+            'discount'=> '14',
             'stock' => '15',
 
         ]);
@@ -50,6 +52,7 @@ class DatabaseSeeder extends Seeder
             'slug' => Str::of('BULTEXME')->slug(),
             'description' => 'Matelas Essentiel 140 X 190',
             'price' => '759',
+            'discount'=> '43',
             'stock' => '7',
 
         ]);
@@ -61,6 +64,7 @@ class DatabaseSeeder extends Seeder
             'slug' => Str::of('EPEDAMP')->slug(),
             'description' => 'Matelas Prestige 160 X 190',
             'price' => '1019',
+            'discount'=> '',
             'stock' => '2',
 
         ]);

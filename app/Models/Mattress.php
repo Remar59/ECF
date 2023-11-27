@@ -16,4 +16,5 @@ class Mattress extends Model
     {
         return $this->belongsToMany(Size::class);
     }
+
 }

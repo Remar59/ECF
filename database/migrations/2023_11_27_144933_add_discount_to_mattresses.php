@@ -11,9 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mattress_size', function (Blueprint $table) {
-            $table->foreignId('mattress_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('size_id')->constrained()->cascadeOnDelete();
+        Schema::table('mattresses', function (Blueprint $table) {
+            $table->integer('discount')->nullable();
         });
     }
 
@@ -22,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('mattress_size');
+        Schema::table('mattresses', function (Blueprint $table) {
+            //
+        });
     }
 };
