@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\MattressController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', [RaspberryController::class, 'home']);
+//Route vers l'index de tous les matelas
+Route::get('/mattressindex', [MattressController::class, 'index']);
+
