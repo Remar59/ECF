@@ -34,11 +34,6 @@
         </div>
 
         <div class="mb-3">
-            <label for="discount" class="block mb-1">discount</label>
-            <input type="text" name="discount" id="discount" value="{{ old('discount') }}" class="rounded-lg">
-        </div>
-
-        <div class="mb-3">
             <label for="stock" class="block mb-1">Stock</label>
             <input type="text" name="stock" id="stock" value="{{ old('stock') }}" class="rounded-lg">
         </div>
