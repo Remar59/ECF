@@ -18,8 +18,6 @@ use Illuminate\Support\Facades\Route;
 //Route pour la homepage
 Route::get('/home', [HomeController::class, 'index']);
 
-
-
 //Route vers l'index des matelas
 Route::get('/matelas', [MattressController::class, 'index']);
 
