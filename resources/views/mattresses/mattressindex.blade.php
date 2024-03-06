@@ -16,9 +16,10 @@
                         <img class="w-full h-[250px] mb-3 object-cover rounded-lg" src="{{ $mattress->image }}"
                             alt="{{ $mattress->brand }}">
 
+                            <div class="block">
                             <h3 class="text-sm text-gray-600 underline group-hover:no-underline"> {{ $mattress->brand }}
                                 <p>{{ $mattress->price }}€</p>
-                                <p>{{ $mattress->sizes->pluck('name')->implode(', ') }}</p>
+                                <p>Tailles disponibles:{{ $mattress->sizes->pluck('name')->implode(', ') }}</p>
                             </h3>
 
                         <div class="flex justify-evenly mb-3">
@@ -31,6 +32,7 @@
 
                             
                         </div>
+                    </div>
                     </a>
                 </div>
             </div>

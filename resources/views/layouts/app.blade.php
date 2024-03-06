@@ -13,9 +13,9 @@
 
     <div class="font-[Inter] bg-gray-200">
         <header class="bg-blue-800 shadow flex items-center justify-between px-3 py-4">
-            <div>
-                <img src="../logo-fond-transparent.png" alt="" class="mr-4"> 
-            </div>
+            <a href="/home">
+                <img src="../logo-fond-transparent.png" alt="" class="mr-4">
+            </a>
             <div class="px-4">
                 <nav class="text-gray-100 space-x-4">
                     <a href="/home" class="text-lg">Accueil</a>
@@ -28,7 +28,9 @@
         @yield('content')
     </div>
 
-    <footer class="bg-blue-800 mt-auto h-14"></footer>
+        <footer class="bg-blue-800 mt-auto h-14 text-gray-100 flex justify-center items-center">
+            <p class="text-center">© Litterie 3000 - 2024</p>
+        </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
