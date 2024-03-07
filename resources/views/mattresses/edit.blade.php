@@ -2,6 +2,8 @@
 
 @section('content')
 
+<div class="px-8 py-6">
+
 <a href="/matelas" class="text-gray-500 flex gap-2 mb-3">
     <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
@@ -39,11 +41,6 @@
         </div>
 
         <div class="mb-3">
-            <label for="discount" class="block mb-1">discount</label>
-            <input type="text" name="discount" id="discount" value="{{ old('discount', $mattress->discount) }}" class="rounded-lg">
-        </div>
-
-        <div class="mb-3">
             <label for="stock" class="block mb-1">Stock</label>
             <input type="text" name="stock" id="stock" value="{{ old('stock', $mattress->stock) }}" class="rounded-lg">
         </div>
@@ -61,4 +58,5 @@
 
         <button class="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-600 hover:scale-105 duration-200">Modifier le {{$mattress->brand}}</button>
     </form>
+</div>
 @endsection

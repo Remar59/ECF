@@ -28,7 +28,6 @@ class DatabaseSeeder extends Seeder
             'slug' => Str::of('EPEDACONFORT+')->slug(),
             'description' => 'Matelas Confort 90 X 190',
             'price' => '759',
-            'discount'=> '43',
             'stock' => '25',
 
         ]);
@@ -40,8 +39,7 @@ class DatabaseSeeder extends Seeder
             'slug' => Str::of('DREAMWAYMA')->slug(),
             'description' => 'Matelas Assurance 90 X 190',
             'price' => '809',
-            'discount'=> '14',
-            'stock' => '15',
+            'stock' => '10',
 
         ]);
         $dreamwayma->sizes()->attach([$size1->id, $size2->id, $size3->id, $size4->id, $size5->id]);
@@ -52,8 +50,7 @@ class DatabaseSeeder extends Seeder
             'slug' => Str::of('BULTEXME')->slug(),
             'description' => 'Matelas Essentiel 140 X 190',
             'price' => '759',
-            'discount'=> '43',
-            'stock' => '7',
+            'stock' => '4',
 
         ]);
         $bultexme->sizes()->attach([$size1->id, $size2->id, $size3->id, $size4->id, $size5->id]);
@@ -64,8 +61,7 @@ class DatabaseSeeder extends Seeder
             'slug' => Str::of('EPEDAMP')->slug(),
             'description' => 'Matelas Prestige 160 X 190',
             'price' => '1019',
-            'discount'=> '',
-            'stock' => '2',
+            'stock' => '17',
 
         ]);
         $epedamp->sizes()->attach([$size1->id, $size2->id, $size3->id, $size4->id, $size5->id]);
