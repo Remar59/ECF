@@ -1,22 +1,39 @@
 ## 1
-Créer le projet dans le bon dossier ("cd ...)
-puis composer create-project laravel/laravel nomduprojet
+# Literie 3000
 
-## 2
-Changer les variables de phpmyadmin (MyIsam en InnoDB)
+Projet de formation, permet une gestion du stock d'un magasin de literie. Site réservé à l'usage du personnel.
 
-## 3
-Changer la db dans le fichier .env (la faire correspondre au nom du projet)
+## Prérequis
 
-## 4
-créer les migrations/modèles et factories
+- WampServer (inclut PHP, MySQL et Apache)
+- Composer
 
-## 5
-Modifier le seeder. Ajouter des colonnes à certaines tables si nécessaire (peut aussi se faire plus tard). Ne pas oublier le slug à cette étape.
-De même, les relations many to one, ou many to many doivent se conçevoir à cette étape.
+## Installation
 
-## 6
-Préparer toutes les views. Essayer de préparer en même temps le routage.
+### 1. Cloner le projet
+Pour récupérer le projet sur votre machine locale, utilisez la commande suivante (nécessite Git) :
 
-## 7
-Vérifier le fonctionnement des slugs, des routes, de la mise en page etc...
+git clone https://votre-repo/votre-projet.git
+cd ECF
+
+Vérifier que Wampserver utilise InnoDB en default storage Engine (MyIsam est mis par défaut, mais la clé étant trop longue, ne fonctionne pas).
+
+Puis:
+
+composer install
+
+php -r "file_exists('.env') || copy('.env.example', '.env');"
+
+Vérifier que le nom de la db corresponde bien avec le contenu du fichier .env
+
+# Génére une clé pour l'application Laravel
+php artisan key:generate
+(création de la clée, à ajouter au fichier .env)
+
+# Création de la db et migration
+php artisan migrate
+ et 
+php artisan db:seed
+
+# Lancement du server
+php artisan serve
